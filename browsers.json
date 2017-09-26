@@ -1,0 +1,33 @@
+{
+    "chrome": {
+        "default": "latest",
+        "versions": {
+            "latest": {
+                "image": "selenoid/chrome:61.0",
+                "port": "4444",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                }
+            }
+        }
+    },
+    "firefox": {
+        "default": "latest",
+        "versions": {
+            "latest": {
+                "image": "selenoid/firefox:55.0",
+                "port": "4444",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                }
+            },
+            "47.0": {
+                "image": "selenoid/firefox:47.0",
+                "port": "4444",
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                }
+            }
+        }
+    }
+}

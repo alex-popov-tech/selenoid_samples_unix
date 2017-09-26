@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  selenoid:
+    network_mode: bridge
+    image: aerokube/selenoid
+    volumes:
+      - ".:/etc/selenoid"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - "4444:4444"
+    command: -limit 2 -conf browsers.json
+
+  selenoid-ui:
+    network_mode: host
+    image: aerokube/selenoid-ui
+    ports:
+      - "4445:8080"
