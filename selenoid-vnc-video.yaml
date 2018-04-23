@@ -1,4 +1,4 @@
-version: '3'
+version: '3.6'
 
 services:
   selenoid:
@@ -9,8 +9,11 @@ services:
     volumes:
       - "$PWD:/etc/selenoid/" # assumed current dir contains browsers.json
       - "/var/run/docker.sock:/var/run/docker.sock"
-    command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-timeout", "5m0s", "-limit", "4"]
-      
+      - "selenoid-video:/opt/selenoid/video/"
+    environment:
+      - OVERRIDE_VIDEO_OUTPUT_DIR=selenoid-video
+    command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-timeout", "2m0s", "-limit", "4", "-video-output-dir", "/opt/selenoid/video"]
+  
   selenoid-ui:
     image: "aerokube/selenoid-ui:latest-release"
     network_mode: bridge
@@ -19,3 +22,7 @@ services:
     ports:
       - "8080:8080"
     command: ["--selenoid-uri", "http://selenoid:4444"]
+
+volumes:
+  selenoid-video:
+    name: selenoid-video

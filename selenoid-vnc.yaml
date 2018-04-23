@@ -1,0 +1,21 @@
+version: '3.6'
+
+services:
+  selenoid:
+    image: "aerokube/selenoid:latest-release"
+    network_mode: bridge
+    ports:
+      - "4444:4444"
+    volumes:
+      - "$PWD:/etc/selenoid/" # assumed current dir contains browsers.json
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-timeout", "2m0s", "-limit", "4"]
+  
+  selenoid-ui:
+    image: "aerokube/selenoid-ui:latest-release"
+    network_mode: bridge
+    links:
+      - selenoid
+    ports:
+      - "8080:8080"
+    command: ["--selenoid-uri", "http://selenoid:4444"]
