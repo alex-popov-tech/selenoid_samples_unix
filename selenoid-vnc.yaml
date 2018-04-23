@@ -9,6 +9,8 @@ services:
     volumes:
       - "$PWD:/etc/selenoid/" # assumed current dir contains browsers.json
       - "/var/run/docker.sock:/var/run/docker.sock"
+    #environment:
+    #  - DOCKER_API_VERSION="1.35" # when errors like current docker version should be ...
     command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-timeout", "2m0s", "-limit", "4"]
   
   selenoid-ui:

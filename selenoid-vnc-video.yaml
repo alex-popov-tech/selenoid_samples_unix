@@ -11,6 +11,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "selenoid-video:/opt/selenoid/video/"
     environment:
+    #  - DOCKER_API_VERSION="1.35" # when errors like current docker version should be ...
       - OVERRIDE_VIDEO_OUTPUT_DIR=selenoid-video
     command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-timeout", "2m0s", "-limit", "4", "-video-output-dir", "/opt/selenoid/video"]
   
