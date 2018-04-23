@@ -6,7 +6,7 @@ This repository contains a few samples of using awesome [Aerokube](https://githu
 
 Download config files for `selenoid` and `docker-compose`:
 
-`git clone https://github.com/AleksanderPopov/selenoid_unix_image && cd selenoid_unix_image`
+`git clone https://github.com/AleksanderPopov/selenoid_samples_unix && cd selenoid_samples_unix`
 
 
 ## Selenoid with VNC, video recording and SelenoidUI
