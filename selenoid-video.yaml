@@ -1,0 +1,20 @@
+version: '3.6'
+
+services:
+  selenoid:
+    image: "aerokube/selenoid:1.6.0"
+    network_mode: bridge
+    ports:
+      - "4444:4444"
+    volumes:
+      - "$PWD:/etc/selenoid/" # assumed current dir contains browsers.json
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "selenoid-video:/opt/selenoid/video/"
+    environment:
+    #  - DOCKER_API_VERSION="1.35" # when errors like current docker version should be ...
+      - OVERRIDE_VIDEO_OUTPUT_DIR=selenoid-video
+    command: ["-conf", "/etc/selenoid/browsers.json", "-timeout", "2m0s", "-limit", "4", "-video-output-dir", "/opt/selenoid/video"]
+
+volumes:
+  selenoid-video:
+    name: selenoid-video

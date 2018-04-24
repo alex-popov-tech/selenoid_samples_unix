@@ -28,6 +28,17 @@ Note: this implementation works with extra volume data-container.
     - `docker-compose -f selenoid-vnc.yaml up -d`
 
 
+## Selenoid with video recording
+
+1. Download required browser images (chrome 65, firefox 59) and video-recorder:
+    - `docker pull selenoid/chrome:65.0 && docker pull selenoid/firefox:59.0 && docker pull selenoid/video-recorder`
+
+2. Run `selenoid` and `selenoid-ui` via `docker-compose`:
+    - `docker-compose -f selenoid-vnc-video.yaml up -d`
+
+Note: this implementation works with extra volume data-container.
+
+
 ## Selenoid only
 
 1. Download required browser images (chrome 65, firefox 59):
