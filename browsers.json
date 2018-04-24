@@ -1,9 +1,9 @@
 {
     "chrome": {
-        "default": "62.0",
+        "default": "65.0",
         "versions": {
-            "62.0": {
-                "image": "selenoid/chrome:62.0",
+            "65.0": {
+                "image": "selenoid/chrome:65.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
@@ -13,10 +13,10 @@
         }
     },
     "firefox": {
-        "default": "57.0",
+        "default": "59.0",
         "versions": {
-            "57.0": {
-                "image": "selenoid/firefox:57.0",
+            "59.0": {
+                "image": "selenoid/firefox:59.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {

@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   selenoid:
-    image: "aerokube/selenoid:latest-release"
+    image: "aerokube/selenoid:1.6.0"
     network_mode: bridge
     ports:
       - "4444:4444"
@@ -16,7 +16,7 @@ services:
     command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-timeout", "2m0s", "-limit", "4", "-video-output-dir", "/opt/selenoid/video"]
   
   selenoid-ui:
-    image: "aerokube/selenoid-ui:latest-release"
+    image: "aerokube/selenoid-ui:1.5.6"
     network_mode: bridge
     links:
       - selenoid
