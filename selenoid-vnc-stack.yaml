@@ -12,7 +12,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
     #environment:
     #  - DOCKER_API_VERSION="1.35" # when errors like current docker version should be ...
-    command: ["-conf", "/etc/selenoid/browsers.json", "-timeout", "5m0s", "-limit", "4"]
+    command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-timeout", "-limit", "4"]
 
   selenoid-ui:
     image: "aerokube/selenoid-ui:1.6.0"
