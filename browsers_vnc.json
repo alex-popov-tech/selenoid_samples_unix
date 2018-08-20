@@ -40,5 +40,18 @@
                 }
             }
         }
+    },
+    "opera": {
+        "default": "55.0",
+        "versions": {
+            "55.0": {
+                "image": "selenoid/vnc:opera_55.0",
+                "port": "4444",
+                "shmSize": 1073741824,
+                "tmpfs": {
+                    "/tmp": "size=128m"
+                }
+            }
+        }
     }
 }
