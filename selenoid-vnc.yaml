@@ -17,6 +17,7 @@ services:
   selenoid-ui:
     image: "aerokube/selenoid-ui:1.6.0"
     network_mode: bridge
+    selenoid-vnc-video.yaml
     links:
       - selenoid
     ports:
