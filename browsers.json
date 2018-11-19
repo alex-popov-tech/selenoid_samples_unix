@@ -2,8 +2,8 @@
     "chrome": {
         "default": "65.0",
         "versions": {
-            "65.0": {
-                "image": "selenoid/chrome:65.0",
+            "70.0": {
+                "image": "selenoid/chrome:70.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
@@ -13,10 +13,10 @@
         }
     },
     "firefox": {
-        "default": "59.0",
+        "default": "63.0",
         "versions": {
-            "59.0": {
-                "image": "selenoid/firefox:59.0",
+            "63.0": {
+                "image": "selenoid/firefox:63.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
@@ -26,10 +26,10 @@
         }
     },
     "opera": {
-        "default": "55.0",
+        "default": "56.0",
         "versions": {
-            "55.0": {
-                "image": "selenoid/opera:55.0",
+            "56.0": {
+                "image": "selenoid/opera:56.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {

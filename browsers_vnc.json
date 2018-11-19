@@ -1,17 +1,17 @@
 {
     "chrome": {
-        "default": "65.0",
+        "default": "70.0",
         "versions": {
-            "65.0": {
-                "image": "selenoid/vnc:chrome_65.0",
+            "70.0": {
+                "image": "selenoid/vnc:chrome_70.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
                     "/tmp": "size=128m"
                 }
             },
-            "64.0": {
-                "image": "selenoid/vnc:chrome_64.0",
+            "69.0": {
+                "image": "selenoid/vnc:chrome_69.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
@@ -21,18 +21,18 @@
         }
     },
     "firefox": {
-        "default": "59.0",
+        "default": "63.0",
         "versions": {
-            "59.0": {
-                "image": "selenoid/vnc:firefox_59.0",
+            "63.0": {
+                "image": "selenoid/vnc:firefox_63.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
                     "/tmp": "size=128m"
                 }
             },
-            "58.0": {
-                "image": "selenoid/vnc:firefox_58.0",
+            "62.0": {
+                "image": "selenoid/vnc:firefox_62.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
@@ -42,10 +42,10 @@
         }
     },
     "opera": {
-        "default": "55.0",
+        "default": "56.0",
         "versions": {
-            "55.0": {
-                "image": "selenoid/vnc:opera_55.0",
+            "56.0": {
+                "image": "selenoid/vnc:opera_56.0",
                 "port": "4444",
                 "shmSize": 1073741824,
                 "tmpfs": {
