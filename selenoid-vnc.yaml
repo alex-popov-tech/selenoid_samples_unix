@@ -17,8 +17,9 @@ services:
   selenoid-ui:
     image: "aerokube/selenoid-ui:1.6.0"
     network_mode: bridge
+    restart: always
     links:
       - selenoid
     ports:
-      - "8081:8080"
+      - "8080:8080"
     command: ["--selenoid-uri", "http://selenoid:4444"]
