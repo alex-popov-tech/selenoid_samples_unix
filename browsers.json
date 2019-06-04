@@ -1,41 +1,41 @@
 {
-    "chrome": {
-        "default": "65.0",
-        "versions": {
-            "70.0": {
-                "image": "selenoid/chrome:70.0",
-                "port": "4444",
-                "shmSize": 1073741824,
-                "tmpfs": {
-                    "/tmp": "size=128m"
-                }
-            }
+  "chrome": {
+    "default": "74.0",
+    "versions": {
+      "74.0": {
+        "image": "selenoid/chrome:74.0",
+        "port": "4444",
+        "shmSize": 1073741824,
+        "tmpfs": {
+          "/tmp": "size=128m"
         }
-    },
-    "firefox": {
-        "default": "63.0",
-        "versions": {
-            "63.0": {
-                "image": "selenoid/firefox:63.0",
-                "port": "4444",
-                "shmSize": 1073741824,
-                "tmpfs": {
-                    "/tmp": "size=128m"
-                }
-            }
-        }
-    },
-    "opera": {
-        "default": "56.0",
-        "versions": {
-            "56.0": {
-                "image": "selenoid/opera:56.0",
-                "port": "4444",
-                "shmSize": 1073741824,
-                "tmpfs": {
-                    "/tmp": "size=128m"
-                }
-            }
-        }
+      }
     }
+  },
+  "firefox": {
+    "default": "67.0",
+    "versions": {
+      "67.0": {
+        "image": "selenoid/firefox:67.0",
+        "port": "4444",
+        "shmSize": 1073741824,
+        "tmpfs": {
+          "/tmp": "size=128m"
+        }
+      }
+    }
+  },
+  "opera": {
+    "default": "60.0",
+    "versions": {
+      "60.0": {
+        "image": "selenoid/opera:60.0",
+        "port": "4444",
+        "shmSize": 1073741824,
+        "tmpfs": {
+          "/tmp": "size=128m"
+        }
+      }
+    }
+  }
 }

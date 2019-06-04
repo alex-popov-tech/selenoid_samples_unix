@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   selenoid:
-    image: "aerokube/selenoid:1.6.0"
+    image: "aerokube/selenoid:1.9.1"
     network_mode: bridge
     restart: always
     ports:
@@ -15,9 +15,9 @@ services:
     #  - DOCKER_API_VERSION="1.35" # when errors like current docker version should be ...
       - OVERRIDE_VIDEO_OUTPUT_DIR=selenoid-video
     command: ["-conf", "/etc/selenoid/browsers_vnc.json", "-limit", "4", "-video-output-dir", "/opt/selenoid/video"]
- 
+
   selenoid-ui:
-    image: "aerokube/selenoid-ui:1.6.0"
+    image: "aerokube/selenoid-ui:1.6.7"
     network_mode: bridge
     restart: always
     links:

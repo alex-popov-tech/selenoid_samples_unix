@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   selenoid:
-    image: "aerokube/selenoid:1.6.0"
+    image: "aerokube/selenoid:1.9.1"
     network_mode: bridge
     restart: always
     ports:
